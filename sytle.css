@@ -1,0 +1,67 @@
+:root {
+  --navy: #024da1;        /* Azul SESI Principal */
+  --navy-dark: #013773;   /* Azul escuro para hover */
+  --green: #50b748;       /* Verde SESI (Ação/Sucesso) */
+  --orange: #f29100;      /* Laranja (Destaque/Inovação) */
+  --paper: #f9f9f9;       /* Fundo claro */
+  --paper-2: #eff2f5;     /* Cinza muito claro */
+  --white: #ffffff;
+  --ink: #222222;         /* Cinza escuro */
+  --steel: #666666;       /* Texto secundário */
+  --line: rgba(2, 77, 161, 0.15);
+  
+  --display: 'Montserrat', sans-serif;
+  --body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --mono: 'Courier New', monospace;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--body);color:var(--ink);background:var(--white);line-height:1.6;}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;}
+img{max-width:100%;display:block;}
+
+/* === HEADER === */
+header{background:var(--navy);padding:20px 0;position:sticky;top:0;z-index:100;}
+.nav{display:flex;align-items:center;justify-content:space-between;max-width:1180px;margin:0 auto;padding:0 28px;}
+.brand{color:var(--white);font-weight:800;font-family:var(--display);font-size:1.4rem;}
+nav.links a{color:var(--white);font-weight:500;margin-left:25px;font-size:0.95rem;transition:0.3s;}
+nav.links a:hover{color:var(--green);}
+.nav-cta{background:var(--green);padding:10px 20px;border-radius:4px;color:var(--white) !important;}
+.nav-cta:hover{background:#44a03d !important;}
+
+/* === HERO === */
+.hero{background:var(--navy);color:var(--white);padding:100px 28px;}
+.hero-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;}
+.hero h1{font-family:var(--display);font-size:3.5rem;line-height:1.1;margin-bottom:20px;}
+.hero h1 em{color:var(--green);font-style:normal;}
+.lead{font-size:1.15rem;color:rgba(255,255,255,0.9);margin-bottom:30px;}
+.btn-primary{background:var(--green);color:var(--white);padding:15px 30px;border:none;border-radius:4px;font-weight:700;cursor:pointer;display:inline-block;}
+
+/* === SEÇÕES GERAIS === */
+section{padding:80px 28px;}
+h2{font-family:var(--display);font-size:2.5rem;color:var(--navy);margin-bottom:40px;}
+.section-head{text-align:center;max-width:800px;margin:0 auto 60px;}
+
+/* === CARDS E DIFERENCIAIS === */
+.course-grid, .diff-grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:30px;max-width:1180px;margin:0 auto;}
+.course-card{border:1px solid var(--line);padding:25px;border-radius:8px;transition:0.3s;}
+.course-card:hover{border-color:var(--green);box-shadow:0 10px 20px rgba(0,0,0,0.05);}
+.diff-item{text-align:center;padding:20px;}
+.diff-icon{font-size:2rem;color:var(--orange);margin-bottom:15px;}
+
+/* === ESTATÍSTICAS === */
+.stats{background:var(--paper-2);padding:60px 0;}
+.stats-grid{display:grid;grid-template-columns:repeat(4, 1fr);max-width:1180px;margin:0 auto;text-align:center;}
+.stat-num{font-family:var(--display);font-size:2.5rem;color:var(--navy);font-weight:800;}
+
+/* === FOOTER === */
+footer{background:var(--navy-dark);color:rgba(255,255,255,0.7);padding:60px 0;}
+.foot-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(4, 1fr);gap:40px;padding:0 28px;}
+
+/* === RESPONSIVIDADE === */
+@media (max-width:860px){
+  .hero-inner, .course-grid, .diff-grid, .foot-grid{grid-template-columns:1fr;}
+  .hero{text-align:center;}
+}
